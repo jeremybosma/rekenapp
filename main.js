@@ -12,7 +12,7 @@ function genereerTafel() {
 
     while (teller < 11) {
       uitkomst = teller * tafelVan
-      tekst += tafelVan + "x" + teller + "=" + uitkomst + "<br>"
+      tekst += teller + "x" + tafelVan + "=" + uitkomst + "<br>"
       teller++
     }
     document.getElementById("tafel").innerHTML = tekst
