@@ -1,8 +1,10 @@
+let errorTekst = "Er is iets misgegaan bij het genereren van de tafels, heb je wel een cijfer ingevuld?"
+
 function genereerTafel() {
   let tafelVan = parseInt(document.getElementById("tafelInput").value);
 
   if (isNaN(tafelVan)) {
-    alert("Er is iets misgegaan bij het genereren van de tafels, heb je wel een cijfer ingevuld?");
+    alert(errorTekst);
   } else {
     let teller = 1
     let uitkomst = 0
@@ -22,7 +24,7 @@ function berekenPlus() {
   let TweedeInput = parseInt(document.getElementById("plus2").value);
 
   if (isNaN(eersteInput + TweedeInput)) {
-    alert("Er is iets misgegaan in de berekening, heb je de cijfers goed ingevuld?");
+    alert(errorTekst);
   } else {
     alert(eersteInput + TweedeInput);
   }
@@ -33,7 +35,7 @@ function berekenMin() {
   let TweedeInput = parseInt(document.getElementById("-2").value);
 
   if (isNaN(eersteInput - TweedeInput)) {
-    alert("Er is iets misgegaan in de berekening, heb je de cijfers goed ingevuld?");
+    alert(errorTekst);
   } else {
     alert(eersteInput - TweedeInput);
   }
@@ -44,7 +46,7 @@ function berekenX() {
   let TweedeInput = parseInt(document.getElementById("x2").value);
 
   if (isNaN(eersteInput * TweedeInput)) {
-    alert("Er is iets misgegaan in de berekening, heb je de cijfers goed ingevuld?");
+    alert(errorTekst);
   } else {
     alert(eersteInput * TweedeInput);
   }
@@ -55,7 +57,7 @@ function berekenDelen() {
   let TweedeInput = parseInt(document.getElementById("deel2").value);
 
   if (isNaN(eersteInput / TweedeInput)) {
-    alert("Er is iets misgegaan in de berekening, heb je de cijfers goed ingevuld?");
+    alert(errorTekst);
   } else {
     alert(eersteInput / TweedeInput);
   }
