@@ -1,9 +1,7 @@
 let errorTekst = "Er is iets misgegaan bij het genereren van je antwoord, heb je wel een cijfer ingevuld?"
 
 // voor de genereer tafel functie
-let teller = 1
-let uitkomst = 0
-let tekst = ""
+
 
 function genereerTafel() {
   let tafelVan = parseInt(document.getElementById("tafelInput").value);
@@ -11,6 +9,10 @@ function genereerTafel() {
   if (isNaN(tafelVan)) {
     alert(errorTekst);
   } else {
+    let teller = 1
+    let uitkomst = 0
+    let tekst = ""
+
     while (teller < 11) {
       uitkomst = teller * tafelVan
       tekst += teller + "x" + tafelVan + "=" + uitkomst + "<br>"
