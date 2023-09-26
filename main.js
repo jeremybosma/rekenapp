@@ -1,4 +1,4 @@
-let errorTekst = "Er is iets misgegaan bij het genereren van de tafels, heb je wel een cijfer ingevuld?"
+let errorTekst = "Er is iets misgegaan bij het genereren van je antwoord, heb je wel een cijfer ingevuld?"
 
 function genereerTafel() {
   let tafelVan = parseInt(document.getElementById("tafelInput").value);
