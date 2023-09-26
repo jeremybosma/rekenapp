@@ -36,19 +36,21 @@
             <li class="nav-item">
               <a class="nav-link" href="gedeelddoor.html">Delen</a>
             </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Instellingen
               </a>
               <ul class="dropdown-menu">
-
                 <li><a class="dropdown-item" href="#" id="btnSwitch">Verander Thema</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item" href="https://github.com/jecta/rekenapp">Download Source Code</a></li>
               </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -62,14 +64,15 @@
       <h2 style="margin-right: 10px;">x</h2>
       <input type="number" class="form-control" placeholder="1" id="x2" style="margin-right: 10px;">
       <button type="button" class="btn btn-primary" value="bereken" onClick="berekenX()">Bereken</button>
-    </div><hr>
+    </div>
+    <hr>
     <h2>Tafels leren</h2>
     <p>Gebruik de onderstaande inputs om de tafels naar jou wens tevoorschijn te laten komen t/m x10.</p>
     <div style="display: flex; align-items: center; width: 300px;">
       <h4 style="width: 440px; margin-right: 10px;">Tafel van:</h2>
-      <input type="number" class="form-control" placeholder="1" id="tafelInput" style="margin-right: 10px;">
-      <button type="button" class="btn btn-primary" value="bereken" onClick="genereerTafel()">Genereer</button>
-  </div><br>
+        <input type="number" class="form-control" placeholder="1" id="tafelInput" style="margin-right: 10px;">
+        <button type="button" class="btn btn-primary" value="bereken" onClick="genereerTafel()">Genereer</button>
+    </div><br>
 
     <div id="tafel"></div>
 
