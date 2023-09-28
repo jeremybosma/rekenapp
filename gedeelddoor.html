@@ -63,27 +63,28 @@
         <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
         <div style="display: flex; align-items: center; width: 300px;">
             <input type="number" class="form-control" placeholder="1" id="deel1" style="margin-right: 10px;">
-            <h2 class="text-muted"  style="margin-right: 10px;">÷</h2>
+            <h2 class="text-muted" style="margin-right: 10px;">÷</h2>
             <input type="number" class="form-control" placeholder="1" id="deel2" style="margin-right: 10px;">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onClick="berekenDelen()">Bereken</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                onClick="berekenDelen()">Bereken</button>
         </div><br>
 
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Delen</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Delen</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="antwoord"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluit</button>
+                        <button type="button" class="btn btn-primary">Kopieer antwoord</button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body" id="antwoord"></div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluit</button>
-              <button type="button" class="btn btn-primary">Kopieer antwoord</button>
-            </div>
-          </div>
         </div>
-      </div>
 
         <footer class="py-3 my-4">
             <p class="text-left text-muted">Gemaakt door Jeremy Bosma</p>
@@ -96,4 +97,5 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
