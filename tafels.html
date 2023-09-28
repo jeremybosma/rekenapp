@@ -60,19 +60,40 @@
     <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
     <div style="display: flex; align-items: center; width: 300px;">
       <input type="number" class="form-control" placeholder="1" id="x1" style="margin-right: 10px;">
-      <h2 class="text-muted"  style="margin-right: 10px;">x</h2>
+      <h2 class="text-muted" style="margin-right: 10px;">x</h2>
       <input type="number" class="form-control" placeholder="1" id="x2" style="margin-right: 10px;">
-      <button type="button" class="btn btn-primary" value="bereken" onClick="berekenX()">Bereken</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        onClick="berekenX()">Bereken</button>
     </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Tafel</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="antwoord"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluit</button>
+            <button type="button" class="btn btn-primary">Kopieer antwoord</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <hr>
     <h2>Tafels leren</h2>
     <p>Gebruik de onderstaande inputs om de tafels naar jou wens tevoorschijn te laten komen t/m x10.</p>
     <div style="display: flex; align-items: center; width: 300px;">
       <h4 style="width: 440px; margin-right: 10px;">Tafel van:</h2>
         <input type="number" class="form-control" placeholder="1" id="tafelInput" style="margin-right: 10px;">
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tafelCollapse" aria-expanded="false" aria-controls="tafelCollapse" onClick="genereerTafel()">Genereer</button>
-    </p></div><br>
-    
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tafelCollapse"
+          aria-expanded="false" aria-controls="tafelCollapse" onClick="genereerTafel()">Genereer</button>
+        </p>
+    </div><br>
+
     <div class="collapse" id="tafelCollapse">
       <div id="tafel" class="card card-body"></div>
     </div>
@@ -87,4 +108,5 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 </body>
+
 </html>

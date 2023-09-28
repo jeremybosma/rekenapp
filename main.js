@@ -5,7 +5,7 @@ function genereerTafel() {
   let tafelVan = parseInt(document.getElementById("tafelInput").value);
 
   if (isNaN(tafelVan)) {
-    alert(errorTekst);
+    document.getElementById("antwoord").innerHTML = errorTekst;
   } else {
     let teller = 1
     let uitkomst = 0
@@ -25,9 +25,9 @@ function berekenPlus() {
   let TweedeInput = parseInt(document.getElementById("plus2").value);
 
   if (isNaN(eersteInput + TweedeInput)) {
-    alert(errorTekst);
+    document.getElementById("antwoord").innerHTML = errorTekst;
   } else {
-    alert(eersteInput + TweedeInput);
+    document.getElementById("antwoord").innerHTML = eersteInput + "+" + TweedeInput + "=" + (eersteInput + TweedeInput);
   }
 }
 
@@ -36,9 +36,9 @@ function berekenMin() {
   let TweedeInput = parseInt(document.getElementById("-2").value);
 
   if (isNaN(eersteInput - TweedeInput)) {
-    alert(errorTekst);
+    document.getElementById("antwoord").innerHTML = errorTekst;
   } else {
-    alert(eersteInput - TweedeInput);
+    document.getElementById("antwoord").innerHTML = eersteInput + "-" + TweedeInput + "=" + (eersteInput - TweedeInput);
   }
 }
 
@@ -47,9 +47,9 @@ function berekenX() {
   let TweedeInput = parseInt(document.getElementById("x2").value);
 
   if (isNaN(eersteInput * TweedeInput)) {
-    alert(errorTekst);
+    document.getElementById("antwoord").innerHTML = errorTekst;
   } else {
-    alert(eersteInput * TweedeInput);
+    document.getElementById("antwoord").innerHTML = eersteInput + "x" + TweedeInput + "=" + (eersteInput * TweedeInput);
   }
 }
 
@@ -58,9 +58,9 @@ function berekenDelen() {
   let TweedeInput = parseInt(document.getElementById("deel2").value);
 
   if (isNaN(eersteInput / TweedeInput)) {
-    alert(errorTekst);
+    document.getElementById("antwoord").innerHTML = errorTekst;
   } else {
-    alert(eersteInput / TweedeInput);
+    document.getElementById("antwoord").innerHTML = eersteInput + "÷" + TweedeInput + "=" + (eersteInput / TweedeInput);
   }
 }
 
