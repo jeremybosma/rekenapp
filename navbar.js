@@ -28,7 +28,7 @@ document.getElementById("navigation").innerHTML = `
             Instellingen
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" id="btnSwitch">Verander Thema</a></li>
+            <li><a class="dropdown-item" href="" id="btnSwitch">Verander Thema</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -39,7 +39,6 @@ document.getElementById("navigation").innerHTML = `
     </div>
   </div>
 </nav>
-
 <br>
 `;
 
