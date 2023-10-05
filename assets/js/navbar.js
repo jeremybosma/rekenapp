@@ -18,7 +18,7 @@ document.getElementById("navigation").innerHTML = `
           <a class="nav-link" href="tafels.html">Tafels</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gedeelddoor.html">Delen</a>
+          <a class="nav-link" href="gedeeldDoor.html">Delen</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
