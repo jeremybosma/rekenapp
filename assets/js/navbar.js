@@ -54,6 +54,6 @@ document.getElementById("footer").innerHTML = `
 <br>
     <footer class="py-3 my-4">
       <ul class="nav justify-content-left pb-3 mb-3">
-        <p class="text-center text-muted">Gemaakt door Jeremy Bosma</p>
+        <p class="text-center text-muted">Gemaakt door <a href="https://jeremybosma.nl">Jeremy Bosma</a></p>
     </footer>
 `;
