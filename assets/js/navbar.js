@@ -1,3 +1,5 @@
+// Components maken met .innerHTML wat we hebben geleerd omdat ik er zat van ben elke page de updaten.
+
 document.getElementById("navigation").innerHTML = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
