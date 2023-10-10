@@ -94,11 +94,11 @@ function checkOplossing() {
     document.getElementById("inputOplossing").classList.add("is-valid");
     document.getElementById("succesText").innerHTML = "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("succesText").innerHTML = "";
     }, 5000);
 
-    setTimeout(showOpdracht, 5000); 
+    setTimeout(showOpdracht, 5000);
   } else {
     document.getElementById("inputOplossing").classList.add("is-invalid");
   }
