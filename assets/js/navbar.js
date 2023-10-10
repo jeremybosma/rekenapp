@@ -36,11 +36,11 @@ document.getElementById("navigation").innerHTML = `
             Instellingen
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="" id="btnSwitch">Verander Thema</a></li>
+            <li><a class="dropdown-item" href="" id="btnSwitch">Wissel Thema</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="https://github.com/jecta/rekenapp">Download Source Code</a></li>
+            <li><a class="dropdown-item" href="https://github.com/jecta/rekenapp">Github</a></li>
           </ul>
         </li>
       </ul>

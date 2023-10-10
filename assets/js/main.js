@@ -63,35 +63,45 @@ function berekenDelen() {
   }
 }
 
-let berekendeoplossing
+let berekendeoplossing;
 
 function showOpdracht() {
   let tafelvan = document.getElementById("inputTafelvan").value;
   let tafeltot = document.getElementById("inputTafeltot").value;
 
   if (tafelvan == 0 || tafeltot == 0) {
-      alert(errorTekst);
-      return;
+    alert(errorTekst);
+    return;
   } else if (tafelvan < 0 || tafeltot < 0) {
-      alert("Je hebt een negatief getal gebruikt, probeer het opnieuw.");
-      return;
+    alert("Je hebt een negatief getal gebruikt, probeer het opnieuw.");
+    return;
   }
 
   let randomnmbr = Math.floor(Math.random() * tafeltot) + 1;
   let opgave = randomnmbr + " x " + tafelvan;
   document.getElementById("inputOpdracht").value = opgave;
-  
+
   berekendeoplossing = randomnmbr * tafelvan;
-  
+
+  setTimeout(document.getElementById("inputOplossing").value = "", 5000);
+
   document.getElementById("inputOplossing").classList.remove("is-valid", "is-invalid");
 }
 
 function checkOplossing() {
-    let ingevoerdeoplossing = document.getElementById("inputOplossing").value
-    if (berekendeoplossing == ingevoerdeoplossing)
-        document.getElementById("inputOplossing").classList.add("is-valid")
-    else
-        document.getElementById("inputOplossing").classList.add("is-invalid")
+  let ingevoerdeoplossing = document.getElementById("inputOplossing").value;
+  if (berekendeoplossing == ingevoerdeoplossing) {
+    document.getElementById("inputOplossing").classList.add("is-valid");
+    document.getElementById("succesText").innerHTML = "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
+
+    setTimeout(function() {
+      document.getElementById("succesText").innerHTML = "";
+    }, 5000);
+
+    setTimeout(showOpdracht, 5000); 
+  } else {
+    document.getElementById("inputOplossing").classList.add("is-invalid");
+  }
 }
 
 function copyAntwoord() {
