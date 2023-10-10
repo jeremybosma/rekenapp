@@ -1,6 +1,5 @@
 let errorTekst = "Er is iets misgegaan bij het genereren van je antwoord, heb je wel een cijfer ingevuld?"
 
-// voor de genereer tafel functie
 function genereerTafel() {
   let tafelVan = parseInt(document.getElementById("tafelInput").value);
 
