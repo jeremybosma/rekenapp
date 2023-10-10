@@ -66,21 +66,24 @@ function berekenDelen() {
 let berekendeoplossing
 
 function showOpdracht() {
-    let tafelvan = document.getElementById("inputTafelvan").value
-    let tafeltot = document.getElementById("inputTafeltot").value
+  let tafelvan = document.getElementById("inputTafelvan").value;
+  let tafeltot = document.getElementById("inputTafeltot").value;
 
-    if (tafelvan == 0 || tafeltot == 0) {
-      alert(errorTekst)
+  if (tafelvan == 0 || tafeltot == 0) {
+      alert(errorTekst);
       return;
-    } else if (tafelvan < 0 || tafeltot < 0) {
-      alert("Je hebt een negatief getal gebruikt, probeer het opnieuw.")
+  } else if (tafelvan < 0 || tafeltot < 0) {
+      alert("Je hebt een negatief getal gebruikt, probeer het opnieuw.");
       return;
-    }
+  }
 
-    let randomnmbr = Math.floor(Math.random() * tafeltot) + 1
-    let opgave = randomnmbr + " x " + tafelvan
-    document.getElementById("inputOpdracht").value = opgave
-    berekendeoplossing = randomnmbr * tafelvan
+  let randomnmbr = Math.floor(Math.random() * tafeltot) + 1;
+  let opgave = randomnmbr + " x " + tafelvan;
+  document.getElementById("inputOpdracht").value = opgave;
+  
+  berekendeoplossing = randomnmbr * tafelvan;
+  
+  document.getElementById("inputOplossing").classList.remove("is-valid", "is-invalid");
 }
 
 function checkOplossing() {
