@@ -63,6 +63,7 @@ function berekenDelen() {
   }
 }
 
+// showOpdracht en checkOplossing is code van Ids wat ik zwaar gemodified heb.
 let berekendeoplossing;
 
 function showOpdracht() {
