@@ -70,13 +70,13 @@ function copyAntwoord() {
   range.selectNode(copyText);
   window.getSelection().removeAllRanges();
   window.getSelection().addRange(range);
-  
+
   try {
     document.execCommand("copy");
     alert("Text gekopieerd: " + copyText.innerText);
   } catch (err) {
     console.error("Kon de text niet kopieren: ", err);
   }
-  
+
   window.getSelection().removeAllRanges();
 }
