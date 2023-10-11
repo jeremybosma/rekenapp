@@ -92,6 +92,7 @@ function showOpdracht() {
 function checkOplossing() {
   let ingevoerdeoplossing = document.getElementById("inputOplossing").value;
   if (berekendeoplossing == ingevoerdeoplossing) {
+    document.getElementById("inputOplossing").classList.remove("is-invalid") 
     document.getElementById("inputOplossing").classList.add("is-valid");
     document.getElementById("succesText").innerHTML = "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
