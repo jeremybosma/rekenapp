@@ -5,6 +5,8 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/bereken.js"></script>
+<script src="assets/js/tafels.js"></script>
 
 <script>
   const btnSwitch = document.getElementById('btnSwitch');

@@ -5,30 +5,7 @@ services:
     build:
       context: ./php
       dockerfile: Dockerfile
-    depends_on:
-      - db
     volumes:
       - ./php:/var/www/html/
     ports:
       - 8000:80
-  db:
-    container_name: rekendatabase
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ROOT_PASSWORD
-      MYSQL_DATABASE: php-app
-      MYSQL_USER: USER
-      MYSQL_PASSWORD: PASS
-    ports:
-      - "9906:3306"
-  phpmyadmin:
-    image: phpmyadmin
-    container_name: phpmyadmin-rekenen
-    links:
-      - db
-    environment:
-      PMA_HOST: db
-    restart: always
-    ports:
-      - 8081:80
