@@ -2,19 +2,18 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Rekenapp - Tafels</title>
-  <meta name="description" content="App om rekenen te leren.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <?php
+  include("inc/head.php")
+    ?>
 </head>
 
 <body>
   <div class="container">
 
-    <div id="navigation"></div>
+    <?php
+    include("inc/navbar.php")
+      ?>
 
     <h1>Tafels</h1>
     <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
@@ -43,34 +42,12 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <?php
+    include("inc/footer.php")
+      ?>
   </div>
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/navbar.js"></script>
 
-  <script>
-    const btnSwitch = document.getElementById('btnSwitch');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-bs-theme', currentTheme);
-    }
-
-    btnSwitch.addEventListener('click', () => {
-      if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
-        document.documentElement.setAttribute('data-bs-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
