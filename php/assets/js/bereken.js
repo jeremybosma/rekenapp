@@ -1,3 +1,6 @@
+let errorTekst =
+  "Er is iets misgegaan bij het genereren van je antwoord, heb je wel een cijfer ingevuld?";
+  
 function berekenPlus() {
   let eersteInput = parseFloat(document.getElementById("plus1").value);
   let TweedeInput = parseFloat(document.getElementById("plus2").value);
