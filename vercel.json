@@ -13,5 +13,5 @@
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
     { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
-    { "src": "/js/(.*)", "dest": "/js/$1" }]
+    { "src": "/js/main.js", "dest": "/api/js/main.js" }]
 }
