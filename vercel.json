@@ -13,9 +13,7 @@
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
     { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
-    
-    { "src": "/assets/js/bereken.js", "dest": "/assets/js/bereken.js" },
-    { "src": "/assets/js/eenheden.js", "dest": "/assets/js/eenheden.js" },
-    { "src": "/assets/js/main.js", "dest": "/assets/js/main.js" },
-    { "src": "/assets/js/tafels.js", "dest": "/assets/js/tafels.js" }]
+    { "src": "/assets/js/(.*)", "dest": "/assets/js/$1" },
+    { "src": "/assets/css/(.*)", "dest": "/assets/css/$1" },
+    { "src": "/assets/images/(.*)", "dest": "/assets/images/$1" }]
 }
