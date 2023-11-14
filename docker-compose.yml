@@ -3,9 +3,9 @@ services:
   php-environment:
     container_name: php-apache-rekenen
     build:
-      context: ./php
+      context: ./api
       dockerfile: Dockerfile
     volumes:
-      - ./php:/var/www/html/
+      - ./api:/var/www/html/
     ports:
       - 8000:80
