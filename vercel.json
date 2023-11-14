@@ -13,9 +13,9 @@
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
     { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
-    { "src": "/css/style.css", "dest": "/css/style.css" },
-    { "src": "/assets/js/bereken.js", "dest": "/assets/js/bereken.js" },
-    { "src": "/assets/js/eenheden.js", "dest": "/assets/js/eenheden.js" },
-    { "src": "/assets/js/main.js", "dest": "/assets/js/main.js" },
-    { "src": "/assets/js/tafels.js", "dest": "/assets/js/tafels.js" }]
+    { "src": "/css/style.css", "dest": "/api/css/style.css" },
+    { "src": "/assets/js/bereken.js", "dest": "/api/assets/js/bereken.js" },
+    { "src": "/assets/js/eenheden.js", "dest": "/api/assets/js/eenheden.js" },
+    { "src": "/assets/js/main.js", "dest": "/api/assets/js/main.js" },
+    { "src": "/assets/js/tafels.js", "dest": "/api/assets/js/tafels.js" }]
 }
