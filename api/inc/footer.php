@@ -4,9 +4,9 @@
     <p class="text-center text-muted">Gemaakt door <a href="https://jeremybosma.nl">Jeremy Bosma</a></p>
 </footer>
 
-<script src="../assets/js/bereken.js"></script>
-<script src="../assets/js/tafels.js"></script>
-<script src="../assets/js/eenheden.js"></script>
+<script src="/assets/js/bereken.js"></script>
+<script src="/assets/js/tafels.js"></script>
+<script src="/assets/js/eenheden.js"></script>
 
 <script>
   const btnSwitch = document.getElementById('btnSwitch');

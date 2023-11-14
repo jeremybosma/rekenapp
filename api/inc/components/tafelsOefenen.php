@@ -30,4 +30,4 @@
             </div>
         </div>
 
-        <script src="../../assets/js/tafels.js"></script>
+        <script src="../assets/js/tafels.js"></script>
