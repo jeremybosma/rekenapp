@@ -9,4 +9,4 @@
       <div id="tafel" class="card card-body"></div>
     </div>
 
-    <script src="../assets/js/tafels.js"></script>
+    <script src="../js/main.js"></script>

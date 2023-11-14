@@ -13,7 +13,5 @@
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
     { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
-    { "src": "/assets/js/(.*)", "dest": "/assets/js/$1" },
-    { "src": "/assets/css/(.*)", "dest": "/assets/css/$1" },
-    { "src": "/assets/images/(.*)", "dest": "/assets/images/$1" }]
+    { "src": "/js/(.*)", "dest": "/js/$1" }]
 }
