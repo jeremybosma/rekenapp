@@ -9,8 +9,8 @@
       <div class="modal-body" id="antwoord"></div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluit</button>
-        <button type="button" class="btn btn-primary" onclick="copyAntwoord()">Kopieer antwoord</button>
       </div>
     </div>
   </div>
 </div>
+

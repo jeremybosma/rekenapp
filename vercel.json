@@ -1,7 +1,20 @@
 {
   "functions": {
-    "php/*.php": {
-      "runtime": "vercel-php@0.6.0"
+    "php/**/*.php": {
+      "runtime": "vercel-php@0.5.2"
     }
-  }
+  },
+  "routes": [
+    { "src": "/(.*)",  "dest": "/php/index.php" },
+    { "src": "/eenhedenOmrekenen.php",  "dest": "/php/eenhedenOmrekenen.php" },
+    { "src": "/gedeeldDoor.php",  "dest": "/php/gedeeldDoor.php" },
+    { "src": "/min.php",  "dest": "/php/min.php" },
+    { "src": "/tafels.php",  "dest": "/php/tafels.php" },
+    { "src": "/tafelsLeren.php",  "dest": "/php/tafelsLeren.php" },
+    { "src": "/tafelsOefenen.php",  "dest": "/php/tafelsOefenen.php" },
+    { "src": "/css/style.css", "dest": "/css/style.css" },
+    { "src": "/assets/js/bereken.js", "dest": "/assets/js/bereken.js" },
+    { "src": "/assets/js/eenheden.js", "dest": "/assets/js/eenheden.js" },
+    { "src": "/assets/js/main.js", "dest": "/assets/js/main.js" },
+    { "src": "/assets/js/tafels.js", "dest": "/assets/js/tafels.js" }]
 }

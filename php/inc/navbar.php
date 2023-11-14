@@ -26,6 +26,9 @@
         <li class="nav-item">
           <a class="nav-link" href="gedeeldDoor.php">Delen</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="eenhedenOmrekenen.php">Eenheden Omrekenen</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
