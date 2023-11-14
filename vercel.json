@@ -1,10 +1,10 @@
 {
   "functions": {
-    "build/assets/(.*)": {
-      "runtime": "/api/assets.php?assets=$1"
-    },
     "api/**/*.php": {
       "runtime": "vercel-php@0.6.0"
+    },
+    "api/assets.php": {
+      "runtime": "/api/assets.php?assets=$1"
     }
   },
   "routes": [
@@ -15,5 +15,10 @@
     { "src": "/min.php",  "dest": "/api/min.php" },
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
-    { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" }]
+    { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
+  
+    {
+      "src": "/build/assets/(.*)",
+      "dest": "/api/assets.php?assets=$1"
+  }]
 }
