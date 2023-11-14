@@ -4,7 +4,7 @@
       "runtime": "vercel-php@0.6.0"
     },
     "api/assets.php": {
-      "runtime": "/api/assets.php?assets=$1"
+      "runtime": "vercel-php@0.6.0"
     }
   },
   "routes": [
