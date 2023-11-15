@@ -19,17 +19,17 @@
                         </div>
                         <div class="col-1 mt-4">=</div>
                         <div class="col-6">
-                        <div class="input-group mb-3">
+                            <div class="input-group mb-3">
                                 <input type="text" class="form-control mt-3" placeholder="antwoord" aria-describedby="basic-addon2">
                                 <span class="input-group-text mt-3" id="basic-addon2">km</span>
                             </div>
                         </div>
                     </div>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-primary" onclick="genereerSom()">Genereer</button>
-                            <button class="btn btn-success" onclick="checkOplossing()">Check</button>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary" onclick="genereerSom()">Genereer</button>
+                        <button class="btn btn-success" onclick="checkOplossing()">Check</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
