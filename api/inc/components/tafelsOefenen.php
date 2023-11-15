@@ -10,7 +10,9 @@
                             <label for="inputTafeltot" class="form-label">Tafel tot</label>
                             <input type="number" class="form-control" id="inputTafeltot" value="10">
                         </div>
+                        <div class="col-md-4 align-self-end">
                         <button type="button" class="btn btn-primary" onclick="showOpdracht()">Start</button>
+                        </div>
                     </form>
                     <div class="card text-center">
                         <div id="tafel" class="card-body">
