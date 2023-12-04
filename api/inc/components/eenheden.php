@@ -8,15 +8,15 @@
                         <option value="2">2D (oppervlakte)</option>
                         <option value="3">3D (inhoud)</option>
                     </select>
+                    <br>
                     <div class="row">
                         <div class="col-5">
                             <div class="input-group mb-3">
                                 <input id="inp_left" type="text" class="form-control" placeholder="Opgave" disabled>
-                                <br>
                                 <span id="eenh_left" class="input-group-text">mm</span>
                             </div>
                         </div>
-                        <div class="col-1 mt-3">=</div>
+                        <div class="col-1 mt-1">=</div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <input id="inp_right" type="text" class="form-control" placeholder="Antwoord">
