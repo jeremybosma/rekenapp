@@ -21,12 +21,10 @@
         include("inc/components/tafelsOefenen.php")
         ?>
 
-
         <?php
         include("inc/footer.php")
         ?>
     </div>
-
 </body>
 
 </html>
