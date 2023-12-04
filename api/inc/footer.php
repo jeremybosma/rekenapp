@@ -4,8 +4,7 @@
     <p class="text-center text-muted">Gemaakt door <a href="https://jeremybosma.nl" target="_blank">Jeremy Bosma</a></p>
 </footer>
 
-<script src="/js/main.js"></script>
-
+<!-- bootstrap theme switcher van google ergens -->
 <script>
   const btnSwitch = document.getElementById('btnSwitch');
   const currentTheme = localStorage.getItem('theme');
@@ -24,6 +23,8 @@
     }
   });
 </script>
+
+<!-- sommen berekenen (plus, min, keer, delen) -->
 
 <script>
   let errorTekst =
@@ -104,12 +105,15 @@
         eersteInput + "÷" + TweedeInput + "=" + eersteInput / TweedeInput;
     }
   }
+</script>
 
+<!-- genereer tafel -->
+<script>
   function genereerTafel() {
     let tafelVan = parseFloat(document.getElementById("tafelInput").value);
 
     if (isNaN(tafelVan)) {
-      document.getElementById("antwoord").innerHTML = errorTekst;
+      document.getElementById("tafel").innerHTML = errorTekst;
     } else {
       let teller = 1;
       let uitkomst = 0;
@@ -123,8 +127,10 @@
       document.getElementById("tafel").innerHTML = tekst;
     }
   }
+</script>
 
-  // showOpdracht en checkOplossing is code van Ids wat ik zwaar gemodified heb.
+<!-- tafels oefenen, modified code van Ids -->
+<script>
   let berekendeoplossing;
 
   function showOpdracht() {
@@ -142,6 +148,7 @@
     let randomnmbr = Math.floor(Math.random() * tafeltot) + 1;
     let opgave = randomnmbr + " x " + tafelvan;
     document.getElementById("inputOpdracht").value = opgave;
+    document.getElementById("inputOplossing").focus();
 
     berekendeoplossing = randomnmbr * tafelvan;
 
@@ -158,7 +165,7 @@
       document.getElementById("inputOplossing").classList.remove("is-invalid");
       document.getElementById("inputOplossing").classList.add("is-valid");
       document.getElementById("succesText").innerHTML =
-        "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
+        "Goed gedaan, je krijgt een nieuwe som over 5 seconden.<br><br>";
 
       setTimeout(function() {
         document.getElementById("succesText").innerHTML = "";
@@ -171,8 +178,8 @@
   }
 </script>
 
+<!-- eenheden berekenen, modified code van Ids -->
 <script>
-  // ids zn code
   const eenheden = ["mm", "cm", "dm", "m", "dam", "hm", "km"];
 
   let index_left = 0;
@@ -187,33 +194,54 @@
   let eenh_right = document.getElementById("eenh_right");
 
   let opgave_float = 3.14;
+  let right_answer = 3.14; //
+
+  let factor = 10;
+  let aantal_stappen = 0;
 
 
   function makeProblem() {
-    //alert("makeProblem doet het " + eenheden[index_left]);
     index_left = Math.floor(Math.random() * 7);
     index_right = Math.floor(Math.random() * 7);
+
+    if (index_left == index_right) {
+      // alert("test dezelfde eenheden gegenereerd er wordt een nieuwe som gemaakt.");
+      return makeProblem();
+    }
 
     eenh_left.innerHTML = eenheden[index_left] + "<sup>" + dim_select.value + "</sup>";
     eenh_right.innerHTML = eenheden[index_right] + "<sup>" + dim_select.value + "</sup>";
 
     opgave_float = (Math.random() * 1000).toFixed(3);
     inp_left.value = opgave_float;
+
+    inp_right.value = "";
+    inp_right.focus();
+
+    document
+      .getElementById("inp_right")
+      .classList.remove("is-valid", "is-invalid");
   }
 
   function checkSolution() {
-    //alert("checkSolution doet het");
-    //eerst het juiste antwoord berekenen
-    let factor = 10;
     if (dim_select.value > 1) {
 
       factor = Math.pow(10, dim_select.value);
     }
     alert("de factor = " + factor);
-  }
-  if(index_left < index_right) {
-  } else {
-    
+    if (index_left < index_right) {
+      aantal_stappen = index_right - index_left;
+      right_answer = opgave_float / Math.pow(factor, aantal_stappen);
+    } else {
+      aantal_stappen = index_left - index_right;
+      right_answer = opgave_float * Math.pow(factor, aantal_stappen);
+    }
+
+    if (inp_right.value == right_answer) {
+      document.getElementById("inp_right").classList.add("is-valid");
+    } else {
+      document.getElementById("inp_right").classList.add("is-invalid");
+    }
   }
 </script>
 

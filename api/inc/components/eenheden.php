@@ -3,7 +3,7 @@
             <div class="card text-center">
                 <div id="tafel" class="card-body">
                 <div class="pb-2">
-                    <select id="dim_select" class="form-select">
+                    <select style="font-weight: bold;" id="dim_select" class="form-select">
                         <option value="1">1D (lengte)</option>
                         <option value="2">2D (oppervlakte)</option>
                         <option value="3">3D (inhoud)</option>
