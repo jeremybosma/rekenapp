@@ -196,7 +196,7 @@
   let eenh_right = document.getElementById("eenh_right");
 
   let opgave_float = 3.14;
-  let right_answer = 3.14;
+  let right_answer = undefined;
 
   let factor = 10;
   let aantal_stappen = 0;
@@ -226,8 +226,6 @@
   }
 
   function checkSolution() {
-console.log(right_answer);
-    
     if (dim_select.value > 1) {
 
       factor = Math.pow(10, dim_select.value);
@@ -255,7 +253,7 @@ console.log(right_answer);
       setTimeout(makeProblem, 5000);
     } else {
       document.getElementById("inp_right").classList.add("is-invalid");
-      if (inp_right.value ==! right_answer) {
+      if (inp_right.value == !right_answer) {
         document.getElementById("alert-banner").classList.add("alert", "alert-info");
         document.getElementById("alert-banner").innerHTML = "Hint: factor = " + factor;
       }
