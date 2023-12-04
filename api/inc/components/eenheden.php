@@ -1,4 +1,3 @@
-<div>
     <div class="row">
         <div class="col-md-6 mt-2">
             <div class="card text-center">
