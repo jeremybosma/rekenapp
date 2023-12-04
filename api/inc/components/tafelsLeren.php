@@ -1,5 +1,5 @@
 <form class="row g-3 mb-2" style="width: 450px;">
-  <div class="col-md-4" style="text-align: left;">
+  <div class="col-md-3" style="text-align: left;">
     <label for="inputTafelvan" class="form-label">Tafel van</label>
     <input type="number" class="form-control" id="tafelInput" value="1">
   </div>
