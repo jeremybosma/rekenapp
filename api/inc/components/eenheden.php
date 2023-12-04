@@ -1,14 +1,15 @@
     <div class="row">
         <div class="col-md-6 mt-2">
+            <div id="factor"></div>
             <div class="card text-center">
                 <div id="tafel" class="card-body">
-                <div class="pb-2">
-                    <select style="font-weight: bold;" id="dim_select" class="form-select">
-                        <option value="1">1D (lengte)</option>
-                        <option value="2">2D (oppervlakte)</option>
-                        <option value="3">3D (inhoud)</option>
-                    </select>
-                </div>
+                    <div class="pb-2">
+                        <select style="font-weight: bold;" id="dim_select" class="form-select">
+                            <option value="1">1D (lengte)</option>
+                            <option value="2">2D (oppervlakte)</option>
+                            <option value="3">3D (inhoud)</option>
+                        </select>
+                    </div>
                     <div class="row">
                         <div class="col-5">
                             <div class="input-group mb-3">

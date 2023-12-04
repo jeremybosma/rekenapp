@@ -218,6 +218,8 @@
     inp_right.value = "";
     inp_right.focus();
 
+    document.getElementById("factor").classList.remove("alert", "alert-info");
+    document.getElementById("factor").innerHTML = "";
     document
       .getElementById("inp_right")
       .classList.remove("is-valid", "is-invalid");
@@ -228,7 +230,10 @@
 
       factor = Math.pow(10, dim_select.value);
     }
-    alert("de factor = " + factor);
+
+    document.getElementById("factor").classList.add("alert", "alert-info");
+    document.getElementById("factor").innerHTML = "Hint: factor = " + factor;
+
     if (index_left < index_right) {
       aantal_stappen = index_right - index_left;
       right_answer = opgave_float / Math.pow(factor, aantal_stappen);
