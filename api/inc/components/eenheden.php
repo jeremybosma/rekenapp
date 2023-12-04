@@ -2,12 +2,13 @@
         <div class="col-md-6 mt-2">
             <div class="card text-center">
                 <div id="tafel" class="card-body">
-                    <select id="inp_dim" class="form-select">
+                <div class="pb-2">
+                    <select id="dim_select" class="form-select">
                         <option value="1">1D (lengte)</option>
                         <option value="2">2D (oppervlakte)</option>
                         <option value="3">3D (inhoud)</option>
                     </select>
-                    <br>
+                </div>
                     <div class="row">
                         <div class="col-5">
                             <div class="input-group mb-3">
@@ -24,7 +25,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <button class="btn btn-primary" onclick="generateProblem()">Genereer</button>
+                        <button class="btn btn-primary" onclick="makeProblem()">Genereer</button>
                         <button class="btn btn-success" onclick="checkSolution()">Check</button>
                     </div>
                 </div>
