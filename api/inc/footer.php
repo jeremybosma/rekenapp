@@ -164,11 +164,13 @@
     if (berekendeoplossing == ingevoerdeoplossing) {
       document.getElementById("inputOplossing").classList.remove("is-invalid");
       document.getElementById("inputOplossing").classList.add("is-valid");
-      document.getElementById("succesText").innerHTML =
-        "Goed gedaan, je krijgt een nieuwe som over 5 seconden.<br><br>";
+      document.getElementById("alert-banner").classList.add("alert", "alert-info");
+      document.getElementById("alert-banner").innerHTML =
+        "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
       setTimeout(function() {
-        document.getElementById("succesText").innerHTML = "";
+        document.getElementById("alert-banner").innerHTML = "";
+        document.getElementById("alert-banner").classList.remove("alert", "alert-info");
       }, 5000);
 
       setTimeout(showOpdracht, 5000);
@@ -194,7 +196,7 @@
   let eenh_right = document.getElementById("eenh_right");
 
   let opgave_float = 3.14;
-  let right_answer = 3.14; //
+  let right_answer = 3.14;
 
   let factor = 10;
   let aantal_stappen = 0;
@@ -218,21 +220,18 @@
     inp_right.value = "";
     inp_right.focus();
 
-    document.getElementById("factor").classList.remove("alert", "alert-info");
-    document.getElementById("factor").innerHTML = "";
-    document
-      .getElementById("inp_right")
-      .classList.remove("is-valid", "is-invalid");
+    document.getElementById("alert-banner").classList.remove("alert", "alert-info");
+    document.getElementById("alert-banner").innerHTML = "";
+    document.getElementById("inp_right").classList.remove("is-valid", "is-invalid");
   }
 
   function checkSolution() {
+console.log(right_answer);
+    
     if (dim_select.value > 1) {
 
       factor = Math.pow(10, dim_select.value);
     }
-
-    document.getElementById("factor").classList.add("alert", "alert-info");
-    document.getElementById("factor").innerHTML = "Hint: factor = " + factor;
 
     if (index_left < index_right) {
       aantal_stappen = index_right - index_left;
@@ -243,9 +242,23 @@
     }
 
     if (inp_right.value == right_answer) {
+      document.getElementById("inp_right").classList.remove("is-invalid");
       document.getElementById("inp_right").classList.add("is-valid");
+      document.getElementById("alert-banner").classList.add("alert", "alert-info");
+      document.getElementById("alert-banner").innerHTML =
+        "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
+
+      setTimeout(function() {
+        document.getElementById("alert-banner").innerHTML = "";
+      }, 5000);
+
+      setTimeout(makeProblem, 5000);
     } else {
       document.getElementById("inp_right").classList.add("is-invalid");
+      if (inp_right.value ==! right_answer) {
+        document.getElementById("alert-banner").classList.add("alert", "alert-info");
+        document.getElementById("alert-banner").innerHTML = "Hint: factor = " + factor;
+      }
     }
   }
 </script>

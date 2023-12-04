@@ -1,6 +1,7 @@
 <div>
     <div class="row">
         <div class="col-md-6">
+        <div id="alert-banner"></div>
             <div class="card text-center">
                 <div id="tafel" class="card-body">
                     <form class="row g-3 mb-2">
