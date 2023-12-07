@@ -276,6 +276,14 @@
 
   let row4col2 = document.getElementById("row4-col2");
   let row4col3 = document.getElementById("row4-col3");
+
+  function LosSomSomOp() {
+    row2col2.value = "0";
+    row2col3.value = "0";
+
+    row3col2.value = "0";
+    row3col3.value = "0";
+  }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
