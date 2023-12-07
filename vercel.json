@@ -13,6 +13,6 @@
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
     { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
-    { "src": "minigames/somsomMagie.php",  "dest": "/api/minigames/somsomMagie.php" }]
+    { "src": "/minigames/somsomMagie.php",  "dest": "/api/minigames/somsomMagie.php" }]
     
 }
