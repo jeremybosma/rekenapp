@@ -33,7 +33,7 @@
             Minigames
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="minigames/somsomMagie.php">somSomMagie</a></li>
+            <li><a class="dropdown-item" href="somsomMagie.php">somSomMagie</a></li>
           </ul>
         </li>
       </ul>
