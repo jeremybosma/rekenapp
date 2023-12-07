@@ -168,7 +168,7 @@
       document.getElementById("alert-banner").innerHTML =
         "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
-      setTimeout(function() {
+      setTimeout(function () {
         document.getElementById("alert-banner").innerHTML = "";
         document.getElementById("alert-banner").classList.remove("alert", "alert-info");
       }, 5000);
@@ -246,7 +246,7 @@
       document.getElementById("alert-banner").innerHTML =
         "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
-      setTimeout(function() {
+      setTimeout(function () {
         document.getElementById("alert-banner").innerHTML = "";
       }, 5000);
 
@@ -261,4 +261,5 @@
   }
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
