@@ -28,6 +28,14 @@
         <li class="nav-item">
           <a class="nav-link" href="eenhedenOmrekenen.php">Eenheden Omrekenen</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Minigames
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="minigames/somsomMagie.php">somSomMagie</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
