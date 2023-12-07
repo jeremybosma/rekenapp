@@ -261,5 +261,22 @@
   }
 </script>
 
+<!-- SomSomMagie deel 1 -->
+<script>
+  let row1col1 = document.getElementById("row1-col1");
+  let row1col4 = document.getElementById("row1-col4");
+
+  let row2col2 = document.getElementById("row2-col2");
+  let row2col3 = document.getElementById("row2-col3");
+  let row2col4 = document.getElementById("row2-col4");
+
+  let row3col2 = document.getElementById("row3-col2");
+  let row3col3 = document.getElementById("row3-col3");
+  let row3col4 = document.getElementById("row3-col4");
+
+  let row4col2 = document.getElementById("row4-col2");
+  let row4col3 = document.getElementById("row4-col3");
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
