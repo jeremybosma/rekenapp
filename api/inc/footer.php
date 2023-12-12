@@ -263,19 +263,19 @@
 
 <!-- SomSomMagie deel 1 -->
 <script>
-  let row1col1 = document.getElementById("row1-col1");
-  let row1col4 = document.getElementById("row1-col4");
+  let row1col1 = document.getElementById("row1-col1").value;
+  let row1col4 = document.getElementById("row1-col4").value;
 
-  let row2col2 = document.getElementById("row2-col2");
-  let row2col3 = document.getElementById("row2-col3");
-  let row2col4 = document.getElementById("row2-col4");
+  let row2col2 = document.getElementById("row2-col2").value;
+  let row2col3 = document.getElementById("row2-col3").value;
+  let row2col4 = document.getElementById("row2-col4").value;
 
-  let row3col2 = document.getElementById("row3-col2");
-  let row3col3 = document.getElementById("row3-col3");
-  let row3col4 = document.getElementById("row3-col4");
+  let row3col2 = document.getElementById("row3-col2").value;
+  let row3col3 = document.getElementById("row3-col3").value;
+  let row3col4 = document.getElementById("row3-col4").value;
 
-  let row4col2 = document.getElementById("row4-col2");
-  let row4col3 = document.getElementById("row4-col3");
+  let row4col2 = document.getElementById("row4-col2").value;
+  let row4col3 = document.getElementById("row4-col3").value;
 
   function LosSomSomOp() {
     row2col2.value = "0";
