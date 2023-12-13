@@ -16,27 +16,31 @@
         <div class="card text-center">
             <div id="tafel" class="card-body">
                 <div class="row">
-                    <div class="col"><input type="number" class="form-control text-center" value="25" id="row1-col1"></div>
+                    <div class="col"><input id="inp_A1" type="text" class="form-control text-center" value="25"></div>
                     <div class="col"></div>
                     <div class="col"></div>
-                    <div class="col"><input type="number" class="form-control text-center" value="3" id="row1-col4"></div>
-                </div><br>
-                <div class="row">
+                    <div class="col"><input id="inp_D1" type="text" class="form-control text-center" value="3"></div>
+                </div>
+                <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input type="number" class="form-control text-center" id="row2-col2" disabled></div>
-                    <div class="col"><input type="number" class="form-control text-center" id="row2-col3" disabled></div>
-                    <div class="col"><input type="number" class="form-control text-center" value="18" id="row2-col4"></div>
-                </div><br>
-                <div class="row">
+                    <div class="col"><input id="opl_B2" type="text" class="form-control text-center" value="" disabled>
+                    </div>
+                    <div class="col"><input id="opl_C2" type="text" class="form-control text-center" value="" disabled>
+                    </div>
+                    <div class="col"><input id="inp_D2" type="text" class="form-control text-center" value="18"></div>
+                </div>
+                <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input type="number" class="form-control text-center" id="row3-col2" disabled></div>
-                    <div class="col"><input type="number" class="form-control text-center" id="row3-col3" disabled></div>
-                    <div class="col"><input type="number" class="form-control text-center" value="10" id="row3-col4"></div>
-                </div><br>
-                <div class="row">
+                    <div class="col"><input id="opl_B3" type="text" class="form-control text-center" value="" disabled>
+                    </div>
+                    <div class="col"><input id="opl_C3" type="text" class="form-control text-center" value="" disabled>
+                    </div>
+                    <div class="col"><input id="inp_D3" type="text" class="form-control text-center" value="10"></div>
+                </div>
+                <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input type="number" class="form-control text-center" value="7" id="row4-col2"></div>
-                    <div class="col"><input type="number" class="form-control text-center" value="21" id="row4-col3"></div>
+                    <div class="col"><input id="inp_B4" type="text" class="form-control text-center" value="7"></div>
+                    <div class="col"><input id="inp_C4" type="text" class="form-control text-center" value="21"></div>
                     <div class="col"></div>
                 </div><br>
                 <button class="btn btn-primary" onclick="LosSomSomOp()">Los SomSom op</button>
