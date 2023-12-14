@@ -276,15 +276,28 @@
   let opl_C3 = document.getElementById("opl_C3");
 
   function LosSomSomOp() {
-    opl_B2.value = 1;
-    opl_C2.value = inp_D2.value - opl_B2.value;
-    opl_B3.value = inp_B4.value - opl_B2.value;
-    opl_C3.value = inp_C4.value - opl_C2.value;
+    document.getElementById("alert-banner").classList.remove("alert", "alert-info");
+    document.getElementById("alert-banner").innerHTML = "";
 
-    if (opl_B2.value + opl_C3.value == inp_A1.value && opl_B3.value + opl_C2.value == inp_D1.value && opl_B3.value + opl_C3.value == inp_D3.value) {
-      alert("BINGO!");
-    } else {
-      alert("niet bingo...");
+    let gok = 1;
+    let decision = true;
+    while (decision) {
+      opl_B2.value = gok;
+      opl_C2.value = parseInt(inp_D2.value) - parseInt(opl_B2.value);
+      opl_B3.value = parseInt(inp_B4.value) - parseInt(opl_B2.value);
+      opl_C3.value = parseInt(inp_C4.value) - parseInt(opl_C2.value);
+
+      if (parseInt(opl_B2.value) + parseInt(opl_C3.value) == parseInt(inp_A1.value)
+        && parseInt(opl_B3.value) + parseInt(opl_C2.value) == parseInt(inp_D1.value)
+        && parseInt(opl_B3.value) + parseInt(opl_C3.value) == parseInt(inp_D3.value)) {
+        document.getElementById("alert-banner").classList.add("alert", "alert-info");
+        document.getElementById("alert-banner").innerHTML = "Bingo!";
+        decision = false;
+      } else {
+        document.getElementById("alert-banner").classList.add("alert", "alert-info");
+        document.getElementById("alert-banner").innerHTML = "Niet bingo!";
+        gok++;
+      }
     }
   }
 </script>
