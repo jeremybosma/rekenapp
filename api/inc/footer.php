@@ -281,7 +281,9 @@
 
     let gok = 1;
     let decision = true;
-    while (decision) {
+
+    while (decision = true) {
+
       opl_B2.value = gok;
       opl_C2.value = parseInt(inp_D2.value) - parseInt(opl_B2.value);
       opl_B3.value = parseInt(inp_B4.value) - parseInt(opl_B2.value);
@@ -298,6 +300,7 @@
         document.getElementById("alert-banner").innerHTML = "Niet bingo!";
         gok++;
       }
+
     }
   }
 </script>
