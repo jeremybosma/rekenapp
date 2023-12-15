@@ -31,10 +31,11 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Minigames
+            SomSomMagie
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="somsomMagie.php">somSomMagie</a></li>
+            <li><a class="dropdown-item" href="somsomMagie2.php">somSomMagie2</a></li>
           </ul>
         </li>
       </ul>

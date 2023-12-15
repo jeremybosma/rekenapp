@@ -25,7 +25,6 @@
 </script>
 
 <!-- sommen berekenen (plus, min, keer, delen) -->
-
 <script>
   let errorTekst =
     "Er is iets misgegaan bij het genereren van je antwoord, heb je wel een cijfer ingevuld?";
@@ -164,13 +163,13 @@
     if (berekendeoplossing == ingevoerdeoplossing) {
       document.getElementById("inputOplossing").classList.remove("is-invalid");
       document.getElementById("inputOplossing").classList.add("is-valid");
-      document.getElementById("alert-banner").classList.add("alert", "alert-info");
+      document.getElementById("alert-banner").classList.add("alert", "alert-success");
       document.getElementById("alert-banner").innerHTML =
         "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
       setTimeout(function () {
         document.getElementById("alert-banner").innerHTML = "";
-        document.getElementById("alert-banner").classList.remove("alert", "alert-info");
+        document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
       }, 5000);
 
       setTimeout(showOpdracht, 5000);
@@ -220,7 +219,7 @@
     inp_right.value = "";
     inp_right.focus();
 
-    document.getElementById("alert-banner").classList.remove("alert", "alert-info");
+    document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
     document.getElementById("alert-banner").innerHTML = "";
     document.getElementById("inp_right").classList.remove("is-valid", "is-invalid");
   }
@@ -276,7 +275,7 @@
   let opl_C3 = document.getElementById("opl_C3");
 
   function LosSomSomOp() {
-    document.getElementById("alert-banner").classList.remove("alert", "alert-info");
+    document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
     document.getElementById("alert-banner").innerHTML = "";
 
     let gok = 1;
@@ -292,15 +291,59 @@
       if (parseInt(opl_B2.value) + parseInt(opl_C3.value) == parseInt(inp_A1.value)
         && parseInt(opl_B3.value) + parseInt(opl_C2.value) == parseInt(inp_D1.value)
         && parseInt(opl_B3.value) + parseInt(opl_C3.value) == parseInt(inp_D3.value)) {
-        document.getElementById("alert-banner").classList.add("alert", "alert-info");
+        document.getElementById("alert-banner").classList.add("alert", "alert-success");
         document.getElementById("alert-banner").innerHTML = "Bingo!";
         decision = false;
       } else {
-        document.getElementById("alert-banner").classList.add("alert", "alert-info");
+        document.getElementById("alert-banner").classList.add("alert", "alert-danger");
         document.getElementById("alert-banner").innerHTML = "Niet bingo!";
         gok++;
       }
 
+    }
+  }
+</script>
+
+<!-- SomSomMagie deel 2 -->
+<script>
+  function generateProblem() {
+    document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
+    document.getElementById("alert-banner").innerHTML = "";
+
+    let opl_B2 = Math.floor(Math.random() * 21);
+    let opl_C2 = Math.floor(Math.random() * 21);
+    let opl_B3 = Math.floor(Math.random() * 21);
+    let opl_C3 = Math.floor(Math.random() * 21);
+
+    let inp_A1 = opl_B2 + opl_C3;
+    let inp_D1 = opl_B3 + opl_C2;
+    let inp_D2 = opl_B2 + opl_C2;
+    let inp_D3 = opl_B3 + opl_C3;
+    let inp_C4 = opl_C2 + opl_C3;
+    let inp_B4 = opl_B2 + opl_B3;
+
+    document.getElementById("inp_A1").value = inp_A1;
+    document.getElementById("inp_D1").value = inp_D1;
+    document.getElementById("inp_D2").value = inp_D2;
+    document.getElementById("inp_D3").value = inp_D3;
+    document.getElementById("inp_C4").value = inp_C4;
+    document.getElementById("inp_B4").value = inp_B4;
+
+    console.log(opl_B2, opl_B3);
+    console.log(opl_C2, opl_C3);
+  }
+
+  function checkSomSom() {
+    let inv_B2 = parseInt(document.getElementById("opl_B2").value);
+    let inv_C2 = parseInt(document.getElementById("opl_C2").value);
+    let inv_B3 = parseInt(document.getElementById("opl_B3").value);
+    let inv_C3 = parseInt(document.getElementById("opl_C3").value);
+    if (inv_B2 == opl_B2 && inv_C2 == opl_C2 && inv_B3 == opl_B3 && inv_C3 == opl_C3) {
+      document.getElementById("alert-banner").classList.add("alert", "alert-success");
+      document.getElementById("alert-banner").innerHTML = "Bingo!";
+    } else {
+      document.getElementById("alert-banner").classList.add("alert", "alert-danger");
+      document.getElementById("alert-banner").innerHTML = "Niet bingo!";
     }
   }
 </script>
