@@ -44,7 +44,48 @@
                     <div class="col"><input id="inp_C4" type="text" class="form-control text-center" value="21"></div>
                     <div class="col"></div>
                 </div><br>
-                <button class="btn btn-primary" onclick="LosSomSomOp()">Los SomSom op</button>
+                <button class="btn btn-primary" onclick="solveProblem()">Los SomSom op</button>
             </div>
         </div>
     </div>
+
+    <script>
+        let inp_A1 = document.getElementById("inp_A1");
+        let inp_D1 = document.getElementById("inp_D1");
+        let inp_D2 = document.getElementById("inp_D2");
+        let inp_D3 = document.getElementById("inp_D3");
+        let inp_C4 = document.getElementById("inp_C4");
+        let inp_B4 = document.getElementById("inp_B4");
+
+        let opl_B2 = document.getElementById("opl_B2");
+        let opl_C2 = document.getElementById("opl_C2");
+        let opl_B3 = document.getElementById("opl_B3");
+        let opl_C3 = document.getElementById("opl_C3");
+
+        function solveProblem() {
+            document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
+            document.getElementById("alert-banner").innerHTML = "";
+
+            let gok = 1;
+            let decision = true;
+            while (decision) {
+                opl_B2.value = gok;
+                opl_C2.value = parseInt(inp_D2.value) - parseInt(opl_B2.value);
+                opl_B3.value = parseInt(inp_B4.value) - parseInt(opl_B2.value);
+                opl_C3.value = parseInt(inp_C4.value) - parseInt(opl_C2.value);
+                if (parseInt(opl_B2.value) + parseInt(opl_C3.value) == parseInt(inp_A1.value) &&
+                    parseInt(opl_B3.value) + parseInt(opl_C2.value) == parseInt(inp_D1.value) &&
+                    parseInt(opl_B3.value) + parseInt(opl_C3.value) == parseInt(inp_D3.value)) {
+                    document.getElementById("alert-banner").classList.remove("alert-danger");
+                    document.getElementById("alert-banner").classList.add("alert", "alert-success");
+                    document.getElementById("alert-banner").innerHTML = "Bingo!";
+                    decision = false;
+                } else {
+                    document.getElementById("alert-banner").classList.add("alert", "alert-danger");
+                    document.getElementById("alert-banner").innerHTML = "Niet bingo!";
+                    gok++;
+                }
+
+            }
+        }
+    </script>

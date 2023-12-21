@@ -12,3 +12,24 @@
 <div class="collapse" id="tafelCollapse">
   <div id="tafel" class="card card-body"></div>
 </div>
+
+<script>
+  function genereerTafel() {
+    let tafelVan = parseFloat(document.getElementById("tafelInput").value);
+
+    if (isNaN(tafelVan)) {
+      document.getElementById("tafel").innerHTML = errorTekst;
+    } else {
+      let teller = 1;
+      let uitkomst = 0;
+      let tekst = "";
+
+      while (teller < 11) {
+        uitkomst = teller * tafelVan;
+        tekst += teller + "x" + tafelVan + "=" + uitkomst + "<br>";
+        teller++;
+      }
+      document.getElementById("tafel").innerHTML = tekst;
+    }
+  }
+</script>
