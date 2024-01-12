@@ -20,7 +20,7 @@
                     <div class="col-1 mt-1">=</div>
                     <div class="col-6">
                         <div class="input-group mb-3">
-                            <input id="inp_right" type="text" class="form-control" placeholder="Antwoord">
+                            <input id="inp_right" type="number" class="form-control" placeholder="Antwoord">
                             <span id="eenh_right" class="input-group-text">km</span>
                         </div>
                     </div>

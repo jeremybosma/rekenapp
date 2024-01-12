@@ -14,5 +14,6 @@
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
     { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
     { "src": "/somsomMagie.php",  "dest": "/api/somsomMagie.php" },
-    { "src": "/somsomMagie2.php",  "dest": "/api/somsomMagie2.php" }]
+    { "src": "/somsomMagie2.php",  "dest": "/api/somsomMagie2.php" },
+    { "src": "/sudoku.php",  "dest": "/api/sudoku.php" }]
 }

@@ -17,36 +17,36 @@
         <div class="card text-center">
             <div id="tafel" class="card-body">
                 <div class="row">
-                    <div class="col"><input id="inp_A1" type="text" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="inp_A1" type="number" class="form-control text-center" value="" disabled>
                     </div>
                     <div class="col"></div>
                     <div class="col"></div>
-                    <div class="col"><input id="inp_D1" type="text" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="inp_D1" type="number" class="form-control text-center" value="" disabled>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input id="opl_B2" type="text" class="form-control text-center" value="">
+                    <div class="col"><input id="opl_B2" type="number" class="form-control text-center" value="">
                     </div>
-                    <div class="col"><input id="opl_C2" type="text" class="form-control text-center" value="">
+                    <div class="col"><input id="opl_C2" type="number" class="form-control text-center" value="">
                     </div>
-                    <div class="col"><input id="inp_D2" type="text" class="form-control text-center" value="" disabled>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col"></div>
-                    <div class="col"><input id="opl_B3" type="text" class="form-control text-center" value="">
-                    </div>
-                    <div class="col"><input id="opl_C3" type="text" class="form-control text-center" value="">
-                    </div>
-                    <div class="col"><input id="inp_D3" type="text" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="inp_D2" type="number" class="form-control text-center" value="" disabled>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input id="inp_B4" type="text" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="opl_B3" type="number" class="form-control text-center" value="">
                     </div>
-                    <div class="col"><input id="inp_C4" type="text" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="opl_C3" type="number" class="form-control text-center" value="">
+                    </div>
+                    <div class="col"><input id="inp_D3" type="number" class="form-control text-center" value="" disabled>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col"></div>
+                    <div class="col"><input id="inp_B4" type="number" class="form-control text-center" value="" disabled>
+                    </div>
+                    <div class="col"><input id="inp_C4" type="number" class="form-control text-center" value="" disabled>
                     </div>
                     <div class="col"></div>
                 </div><br>

@@ -20,7 +20,7 @@
                     <div class="input-group mb-3">
                         <input id="inputOpdracht" type="text" class="form-control" placeholder="Som" disabled>
                         <span class="input-group-text">=</span>
-                        <input id="inputOplossing" type="text" class="form-control" placeholder="Antwoord">
+                        <input id="inputOplossing" type="number" class="form-control" placeholder="Antwoord">
                     </div>
                     <div id="succesText"></div>
                     <div class="d-grid">
