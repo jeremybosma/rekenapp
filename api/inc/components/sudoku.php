@@ -64,10 +64,13 @@
         let selected_sudoku = sudokus[random_nmbr];
         for (index = 0; index <= 80; index++) {
             let cellValue = selected_sudoku[index];
+            let cellElement = document.getElementById(index + 1);
             if (cellValue !== 0) {
-                document.getElementById(index + 1).innerText = cellValue;
+                cellElement.innerText = cellValue;
+                cellElement.classList.add("inactive-cel");
+                cellElement.onclick = null;
             } else {
-                document.getElementById(index + 1).innerText = '';
+                cellElement.innerText = '';
             }
         }
     }
@@ -115,7 +118,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        border: 1px solid black;
+        border: 1px solid #D2D2D2;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -131,6 +134,10 @@
         padding: 2em 5em;
         font-size: 120%;
         order: -1;
+    }
+
+    .inactive-cel {
+        background-color: #eeeee9;
     }
 
     @supports (display:grid) {
