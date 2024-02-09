@@ -9,6 +9,7 @@
     { "src": "/index.php",  "dest": "/api/index.php" },
     { "src": "/eenhedenOmrekenen.php",  "dest": "/api/eenhedenOmrekenen.php" },
     { "src": "/gedeeldDoor.php",  "dest": "/api/gedeeldDoor.php" },
+    { "src": "/plus.php",  "dest": "/api/plus.php" },
     { "src": "/min.php",  "dest": "/api/min.php" },
     { "src": "/tafels.php",  "dest": "/api/tafels.php" },
     { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
