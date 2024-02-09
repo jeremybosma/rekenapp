@@ -60,11 +60,13 @@
     }
 
     function generateSudoku() {
-        let random_nmbr = Math.floor(Math.random() * 7);
-        let selected_sudoku = sudokus[random_nmbr];
-        for (index = 0; index <= 80; index++) {
-            let cellValue = selected_sudoku[index];
+        let randomIndex = Math.floor(Math.random() * sudokus.length);
+        let selectedSudoku = sudokus[randomIndex];
+
+        selectedSudoku.forEach((cellValue, index) => {
             let cellElement = document.getElementById(index + 1);
+            cellElement.classList.remove("inactive-cel");
+
             if (cellValue !== 0) {
                 cellElement.innerText = cellValue;
                 cellElement.classList.add("inactive-cel");
@@ -72,7 +74,7 @@
             } else {
                 cellElement.innerText = '';
             }
-        }
+        });
     }
 
 </script>
