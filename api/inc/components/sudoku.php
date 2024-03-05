@@ -2,7 +2,7 @@
     <div class="row">
         <div id="alert-banner"></div>
 
-        <div class="col-10 sudoku-container">
+        <div class="col-10 sudoku-container" style="margin-right: -40px !important;">
             <main class="sudoku-container-left" id="sudoku"></main>
         </div>
 

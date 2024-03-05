@@ -27,7 +27,7 @@
           <a class="nav-link" href="gedeeldDoor.php">Delen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="eenhedenOmrekenen.php">Eenheden Omrekenen</a>
+          <a class="nav-link" href="eenhedenOmrekenen.php">Eenheden</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,6 +41,9 @@
         <li class="nav-item">
           <a class="nav-link" href="sudoku.php">Sudoku</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="procenten.php">Procenten</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
@@ -52,7 +55,8 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="https://github.com/jecta/rekenapp">Github</a></li>
+            <li><a class="dropdown-item" href="https://github.com/jecta/rekenapp">Source Code</a></li>
+            <li><a class="dropdown-item" href="https://jeremybosma.nl">Portfolio</a></li>
           </ul>
         </li>
       </ul>
