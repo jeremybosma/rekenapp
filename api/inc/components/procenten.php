@@ -1,4 +1,4 @@
-<div class="col-6">
+<div class="col-4">
     <div class="mb-3">
         <select class="form-select is-invalid" id="select_soort">
             <option disabled selected>Kies*</option>
@@ -21,7 +21,7 @@
 </div>
 
 <div class="row mb-3" style="margin-top: -180px;">
-    <div class="col-3">
+    <div class="col-2">
         <div class="card" style="margin-top: 200px">
             <div class="card-header">
                 Oud
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-2">
         <div class="card" style="margin-top: 200px">
             <div class="card-header">
                 Nieuw
@@ -62,7 +62,7 @@
     </div>
 </div>
 
-<div class="col-6">
+<div class="col-4">
     <div class="input-group mb-3">
         <span class="input-group-text">Deler:</span>
         <input type="text" class="form-control" id="deler" disabled>
