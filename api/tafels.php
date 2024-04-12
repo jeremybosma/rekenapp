@@ -3,17 +3,13 @@
 
 <head>
   <title>Rekenapp - Tafels</title>
-  <?php
-  include("inc/head.php")
-    ?>
+  <?php include ("inc/head.php") ?>
 </head>
 
 <body>
   <div class="container">
 
-    <?php
-    include("inc/navbar.php")
-      ?>
+    <?php include ("inc/navbar.php") ?>
 
     <h1>Tafels</h1>
     <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
@@ -25,13 +21,9 @@
         onClick="berekenX()">Bereken</button>
     </div>
 
-    <?php
-    include("inc/components/antwoordModal.php")
-      ?>
+    <?php include ("inc/components/antwoordModal.php") ?>
 
-    <?php
-    include("inc/footer.php")
-      ?>
+    <?php include ("inc/footer.php") ?>
   </div>
 
 </body>

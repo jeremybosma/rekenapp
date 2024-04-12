@@ -1,16 +1,11 @@
 <?php
 include "db/dbconnection.class.php";
 $dbconnect = new Dbconnection();
-//$dbconnect is een instantie van de Dbconnection-class
-//en bevat dus alles wat nodig is voor een werkende database-connectie
 $sql = "SELECT * FROM sommen ORDER BY RAND() LIMIT 1";
-//standaard:
 $query = $dbconnect->prepare($sql);
-//standaard:
 $query->execute();
-//standaard:
 $recset = $query->fetchAll(2);
-//slimmigheid: kijken wat de raw-output is
+
 /*echo "<pre>";
 print_r($recset);
 echo "</pre>";*/
@@ -102,7 +97,8 @@ echo "</pre>";*/
             <span class="input-group-text" id="basic-addon1">Vermenigvuldigingsfactor</span>
             <input id="inp_factor" type="text" class="form-control" disabled>
         </div>
-        <img src="https://raw.githubusercontent.com/idsosd/BSD-O-AUG23A-procenten_rekentool_met_db/main/htdocs/procentenrekentool/pijlen.avif" alt="" class="img-fluid">
+        <img src="https://raw.githubusercontent.com/idsosd/BSD-O-AUG23A-procenten_rekentool_met_db/main/htdocs/procentenrekentool/pijlen.avif"
+            alt="" class="img-fluid">
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Deler</span>
             <input id="inp_deler" type="text" class="form-control" disabled>
@@ -134,101 +130,55 @@ echo "</pre>";*/
     <div class="col-1"></div>
 </div>
 
-</div>
 <script>
-    const oud = document.getElementById("inp_oud")
+    const oud = document.getElementById("inp_oud");
+    const soort = document.getElementById("select_soort");
+    const perc = document.getElementById("inp_percentage");
+    const nieuw = document.getElementById("inp_nieuw");
+    const losopknop = document.getElementById("losop_btn");
+    const factor = document.getElementById("inp_factor");
+    const deler = document.getElementById("inp_deler");
 
-    const soort = document.getElementById("select_soort")
-    const perc = document.getElementById("inp_percentage")
+    function enableButtonIfValid() {
+        const isOudOrNieuwFilled = oud.value || nieuw.value;
+        const isSoortAndPercFilled = soort.value && perc.value;
+        const isValid = isOudOrNieuwFilled && isSoortAndPercFilled || (oud.value && nieuw.value);
 
-    const nieuw = document.getElementById("inp_nieuw")
+        losopknop.disabled = !isValid;
+        [oud, soort, perc, nieuw].forEach(input => {
+            input.classList.toggle("is-invalid", !input.value);
+            input.classList.toggle("is-valid", !!input.value);
+        });
+    }
 
-    const losopknop = document.getElementById("losop_btn")
-
-    const factor = document.getElementById("inp_factor")
-    const deler = document.getElementById("inp_deler")
-
-    const answer = document.getElementById("answer")
-
-    let ber_factor
-
-    function checkInput() {
-        if (oud.value != "" && soort.value != "" && perc.value != "") {
-            losopknop.disabled = false
-            oud.classList.remove("is-invalid")
-            oud.classList.add("is-valid")
-            soort.classList.remove("is-invalid")
-            soort.classList.add("is-valid")
-            perc.classList.remove("is-invalid")
-            perc.classList.add("is-valid")
-        }
-        else if (nieuw.value != "" && soort.value != "" && perc.value != "") {
-            losopknop.disabled = false
-            nieuw.classList.remove("is-invalid")
-            nieuw.classList.add("is-valid")
-            soort.classList.remove("is-invalid")
-            soort.classList.add("is-valid")
-            perc.classList.remove("is-invalid")
-            perc.classList.add("is-valid")
-        }
-        else if (oud.value != "" && nieuw.value != "") {
-            losopknop.disabled = false
-            oud.classList.remove("is-invalid")
-            oud.classList.add("is-valid")
-            nieuw.classList.remove("is-invalid")
-            nieuw.classList.add("is-valid")
+    function calculateFactor(soortValue, percValue) {
+        switch (soortValue) {
+            case "0": return percValue / 100;
+            case "1": return 1 + percValue / 100;
+            case "2": return 1 - percValue / 100;
+            default: return null;
         }
     }
 
     function solveProblem() {
-        if (oud.value != "" && soort.value != "" && perc.value != "") {
-            if (soort.value == 0)
-                ber_factor = perc.value / 100
-            else if (soort.value == 1)
-                ber_factor = 1 + perc.value / 100
-            else
-                ber_factor = 1 - perc.value / 100
-            factor.value = ber_factor
-            deler.value = ber_factor
-            nieuw.value = oud.value * ber_factor
+        let ber_factor;
+        if (oud.value && soort.value && perc.value) {
+            ber_factor = calculateFactor(soort.value, parseFloat(perc.value));
+            nieuw.value = oud.value * ber_factor;
+        } else if (nieuw.value && soort.value && perc.value) {
+            ber_factor = calculateFactor(soort.value, parseFloat(perc.value));
+            oud.value = nieuw.value / ber_factor;
+        } else {
+            ber_factor = parseFloat((nieuw.value / oud.value).toFixed(4));
+            soort.value = ber_factor > 1 ? "1" : "2";
+            perc.value = ((Math.abs(1 - ber_factor)) * 100).toFixed(2);
         }
-        else if (nieuw.value != "" && soort.value != "" && perc.value != "") {
-            if (soort.value == 0)
-                ber_factor = perc.value / 100
-            else if (soort.value == 1)
-                ber_factor = 1 + perc.value / 100
-            else
-                ber_factor = 1 - perc.value / 100
-            factor.value = ber_factor
-            deler.value = ber_factor
-            oud.value = nieuw.value / ber_factor
-        }
-        else {
-            ber_factor = (nieuw.value / oud.value).toFixed(4)
-            factor.value = ber_factor
-            deler.value = ber_factor
-            if (ber_factor > 1) {
-                soort.value = 1
-                perc.value = ((ber_factor - 1) * 100).toFixed(2)
-            }
-            else {
-                soort.value = 2
-                perc.value = ((1 - ber_factor) * 100).toFixed(2)
-            }
-        }
-        oud.disabled = true
-        nieuw.disabled = true
-        //alert ("je kunt opnieuw beginnen door een re-load")
-        soort.disabled = true
-        perc.disabled = true
-        losopknop.disabled = true
+
+        factor.value = deler.value = ber_factor;
+        [oud, nieuw, soort, perc, losopknop].forEach(input => input.disabled = true);
     }
 
     function checkAnswer(antw) {
-        if (answer.value == antw) {
-            alert("Antwoord is goed")
-        } else {
-            alert("Antwoord is fout")
-        }
+        alert(answer.value == antw ? "Antwoord is goed" : "Antwoord is fout");
     }
 </script>

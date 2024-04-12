@@ -3,17 +3,13 @@
 
 <head>
   <title>Rekenapp - Min</title>
-  <?php
-  include("inc/head.php")
-    ?>
+  <?php include ("inc/head.php") ?>
 </head>
 
 <body>
   <div class="container">
 
-    <?php
-    include("inc/navbar.php")
-      ?>
+    <?php include ("inc/navbar.php") ?>
 
     <h1>Min</h1>
     <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
@@ -42,9 +38,7 @@
       </div>
     </div>
 
-    <?php
-    include("inc/footer.php")
-      ?>
+    <?php include ("inc/footer.php") ?>
 
   </div>
 

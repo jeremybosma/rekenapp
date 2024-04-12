@@ -3,17 +3,13 @@
 
 <head>
   <title>Rekenapp - Plus</title>
-  <?php
-  include("inc/head.php")
-    ?>
+  <?php include ("inc/head.php") ?>
 </head>
 
 <body>
   <div class="container">
 
-    <?php
-    include("inc/navbar.php")
-      ?>
+    <?php include ("inc/navbar.php") ?>
 
     <h1>Plus</h1>
     <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
@@ -24,14 +20,10 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
         onClick="berekenPlus()">Bereken</button>
 
-      <?php
-      include("inc/components/antwoordModal.php")
-        ?>
+      <?php include ("inc/components/antwoordModal.php") ?>
 
     </div>
-    <?php
-    include("inc/footer.php")
-      ?>
+    <?php include ("inc/footer.php") ?>
   </div>
 
 
