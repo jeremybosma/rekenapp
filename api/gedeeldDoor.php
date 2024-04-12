@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 
 <head>
     <title>Rekenapp - Delen</title>
@@ -13,13 +13,11 @@
 
         <h1>Gedeeld Door</h1>
         <p>Gebruik de onderstaande inputs om jou som op te lossen.</p>
-        <div style="display: flex; align-items: center; width: 300px;">
-            <input type="number" class="form-control" placeholder="1" id="deel1" style="margin-right: 10px;">
-            <h2 class="text-muted" style="margin-right: 10px;">÷</h2>
-            <input type="number" class="form-control" placeholder="1" id="deel2" style="margin-right: 10px;">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                onClick="berekenDelen()">Bereken</button>
-        </div>
+
+        <?php
+        $operationVar = 'divide';
+        include ("inc/components/bereken.php")
+            ?>
 
         <?php include ("inc/components/antwoordModal.php") ?>
 
