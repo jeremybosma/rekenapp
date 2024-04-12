@@ -3,12 +3,12 @@ services:
   php-environment:
     container_name: php-apache-BSD-O-AUG23A
     build:
-      context: ./htdocs
+      context: ./api
       dockerfile: Dockerfile
     depends_on:
       - db
     volumes:
-      - ./htdocs:/var/www/html/
+      - ./api:/var/www/html/
     ports:
       - 8000:80
   db:
@@ -23,7 +23,7 @@ services:
     ports:
       - "9906:3306"
     volumes:
-      - ./htdocs/db/sommen.sql:/docker-entrypoint-initdb.d/sommen.sql
+      - ./api/db/sommen.sql:/docker-entrypoint-initdb.d/sommen.sql
   phpmyadmin:
     image: phpmyadmin
     container_name: phpmyadmin-BSD-O-AUG23A
