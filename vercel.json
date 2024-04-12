@@ -1,21 +1,21 @@
 {
   "functions": {
-    "api/**/*.php": {
+    "htdocs/**/*.php": {
       "runtime": "vercel-php@0.6.0"
     }
   },
   "routes": [
-    { "src": "/",  "dest": "/api/index.php" },
-    { "src": "/index.php",  "dest": "/api/index.php" },
-    { "src": "/eenhedenOmrekenen.php",  "dest": "/api/eenhedenOmrekenen.php" },
-    { "src": "/gedeeldDoor.php",  "dest": "/api/gedeeldDoor.php" },
-    { "src": "/plus.php",  "dest": "/api/plus.php" },
-    { "src": "/min.php",  "dest": "/api/min.php" },
-    { "src": "/tafels.php",  "dest": "/api/tafels.php" },
-    { "src": "/tafelsLeren.php",  "dest": "/api/tafelsLeren.php" },
-    { "src": "/tafelsOefenen.php",  "dest": "/api/tafelsOefenen.php" },
-    { "src": "/somsomMagie.php",  "dest": "/api/somsomMagie.php" },
-    { "src": "/somsomMagie2.php",  "dest": "/api/somsomMagie2.php" },
-    { "src": "/sudoku.php",  "dest": "/api/sudoku.php" },
-    { "src": "/procenten.php",  "dest": "/api/procenten.php" }]
+    { "src": "/",  "dest": "/htdocs/index.php" },
+    { "src": "/index.php",  "dest": "/htdocs/index.php" },
+    { "src": "/eenhedenOmrekenen.php",  "dest": "/htdocs/eenhedenOmrekenen.php" },
+    { "src": "/gedeeldDoor.php",  "dest": "/htdocs/gedeeldDoor.php" },
+    { "src": "/plus.php",  "dest": "/htdocs/plus.php" },
+    { "src": "/min.php",  "dest": "/htdocs/min.php" },
+    { "src": "/tafels.php",  "dest": "/htdocs/tafels.php" },
+    { "src": "/tafelsLeren.php",  "dest": "/htdocs/tafelsLeren.php" },
+    { "src": "/tafelsOefenen.php",  "dest": "/htdocs/tafelsOefenen.php" },
+    { "src": "/somsomMagie.php",  "dest": "/htdocs/somsomMagie.php" },
+    { "src": "/somsomMagie2.php",  "dest": "/htdocs/somsomMagie2.php" },
+    { "src": "/sudoku.php",  "dest": "/htdocs/sudoku.php" },
+    { "src": "/procenten.php",  "dest": "/htdocs/procenten.php" }]
 }

@@ -24,17 +24,21 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input id="opl_B2" type="number" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="opl_B2" type="number" class="form-control text-center" value=""
+                            disabled>
                     </div>
-                    <div class="col"><input id="opl_C2" type="number" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="opl_C2" type="number" class="form-control text-center" value=""
+                            disabled>
                     </div>
                     <div class="col"><input id="inp_D2" type="number" class="form-control text-center" value="18"></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col"></div>
-                    <div class="col"><input id="opl_B3" type="number" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="opl_B3" type="number" class="form-control text-center" value=""
+                            disabled>
                     </div>
-                    <div class="col"><input id="opl_C3" type="number" class="form-control text-center" value="" disabled>
+                    <div class="col"><input id="opl_C3" type="number" class="form-control text-center" value=""
+                            disabled>
                     </div>
                     <div class="col"><input id="inp_D3" type="number" class="form-control text-center" value="10"></div>
                 </div>
