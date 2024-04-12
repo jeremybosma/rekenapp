@@ -69,51 +69,55 @@
     </div>
 
     <script>
-        let opl_B2 = 0;
-        let opl_C2 = 0;
-        let opl_B3 = 0;
-        let opl_C3 = 0;
-
+        const oplValues = { B2: 0, C2: 0, B3: 0, C3: 0 };
 
         function generateSomSom() {
-            document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
-            document.getElementById("alert-banner").innerHTML = "";
-            opl_B2 = Math.floor(Math.random() * 21);
-            opl_C2 = Math.floor(Math.random() * 21);
-            opl_B3 = Math.floor(Math.random() * 21);
-            opl_C3 = Math.floor(Math.random() * 21);
+            const alertBanner = document.getElementById("alert-banner");
+            alertBanner.classList.remove("alert", "alert-success", "alert-danger");
+            alertBanner.innerHTML = "";
 
-            let inp_A1 = opl_B2 + opl_C3;
-            let inp_D1 = opl_B3 + opl_C2;
-            let inp_D2 = opl_B2 + opl_C2;
-            let inp_D3 = opl_B3 + opl_C3;
-            let inp_C4 = opl_C2 + opl_C3;
-            let inp_B4 = opl_B2 + opl_B3;
+            Object.keys(oplValues).forEach(key => {
+                oplValues[key] = Math.floor(Math.random() * 21);
+            });
 
-            document.getElementById("inp_A1").value = inp_A1;
-            document.getElementById("inp_D1").value = inp_D1;
-            document.getElementById("inp_D2").value = inp_D2;
-            document.getElementById("inp_D3").value = inp_D3;
-            document.getElementById("inp_C4").value = inp_C4;
-            document.getElementById("inp_B4").value = inp_B4;
-            console.log(opl_B2, opl_C2, opl_B3, opl_C3)
+            const { B2, C2, B3, C3 } = oplValues;
+
+            const inpValues = {
+                A1: B2 + C3,
+                D1: B3 + C2,
+                D2: B2 + C2,
+                D3: B3 + C3,
+                C4: C2 + C3,
+                B4: B2 + B3
+            };
+
+            Object.keys(inpValues).forEach(key => {
+                document.getElementById(`inp_${key}`).value = inpValues[key];
+            });
+
+            console.log(B2, C2, B3, C3);
         }
 
         function checkSomSom() {
-            document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
-            document.getElementById("alert-banner").innerHTML = "";
+            const alertBanner = document.getElementById("alert-banner");
+            alertBanner.classList.remove("alert", "alert-success", "alert-danger");
+            alertBanner.innerHTML = "";
 
-            let inv_B2 = parseInt(document.getElementById("opl_B2").value);
-            let inv_C2 = parseInt(document.getElementById("opl_C2").value);
-            let inv_B3 = parseInt(document.getElementById("opl_B3").value);
-            let inv_C3 = parseInt(document.getElementById("opl_C3").value);
-            if (inv_B2 == opl_B2 && inv_C2 == opl_C2 && inv_B3 == opl_B3 && inv_C3 == opl_C3) {
-                document.getElementById("alert-banner").classList.add("alert", "alert-success");
-                document.getElementById("alert-banner").innerHTML = "Bingo!";
-            }
-            else {
-                document.getElementById("alert-banner").classList.add("alert", "alert-danger");
-                document.getElementById("alert-banner").innerHTML = "Niet bingo!";
+            const invValues = {
+                B2: parseInt(document.getElementById("opl_B2").value),
+                C2: parseInt(document.getElementById("opl_C2").value),
+                B3: parseInt(document.getElementById("opl_B3").value),
+                C3: parseInt(document.getElementById("opl_C3").value)
+            };
+
+            const isCorrect = Object.keys(oplValues).every(key => invValues[key] === oplValues[key]);
+
+            if (isCorrect) {
+                alertBanner.classList.add("alert", "alert-success");
+                alertBanner.innerHTML = "Bingo!";
+            } else {
+                alertBanner.classList.add("alert", "alert-danger");
+                alertBanner.innerHTML = "Niet bingo!";
             }
         }
     </script>

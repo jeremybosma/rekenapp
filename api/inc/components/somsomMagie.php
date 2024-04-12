@@ -54,42 +54,35 @@
     </div>
 
     <script>
-        let inp_A1 = document.getElementById("inp_A1");
-        let inp_D1 = document.getElementById("inp_D1");
-        let inp_D2 = document.getElementById("inp_D2");
-        let inp_D3 = document.getElementById("inp_D3");
-        let inp_C4 = document.getElementById("inp_C4");
-        let inp_B4 = document.getElementById("inp_B4");
-
-        let opl_B2 = document.getElementById("opl_B2");
-        let opl_C2 = document.getElementById("opl_C2");
-        let opl_B3 = document.getElementById("opl_B3");
-        let opl_C3 = document.getElementById("opl_C3");
+        const inputs = ["inp_A1", "inp_D1", "inp_D2", "inp_D3", "inp_C4", "inp_B4", "opl_B2", "opl_C2", "opl_B3", "opl_C3"].reduce((acc, id) => {
+            acc[id] = document.getElementById(id);
+            return acc;
+        }, {});
 
         function solveProblem() {
-            document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
-            document.getElementById("alert-banner").innerHTML = "";
+            const alertBanner = document.getElementById("alert-banner");
+            alertBanner.classList.remove("alert", "alert-success", "alert-danger");
+            alertBanner.innerHTML = "";
 
             let gok = 1;
-            let decision = true;
-            while (decision) {
-                opl_B2.value = gok;
-                opl_C2.value = parseInt(inp_D2.value) - parseInt(opl_B2.value);
-                opl_B3.value = parseInt(inp_B4.value) - parseInt(opl_B2.value);
-                opl_C3.value = parseInt(inp_C4.value) - parseInt(opl_C2.value);
-                if (parseInt(opl_B2.value) + parseInt(opl_C3.value) == parseInt(inp_A1.value) &&
-                    parseInt(opl_B3.value) + parseInt(opl_C2.value) == parseInt(inp_D1.value) &&
-                    parseInt(opl_B3.value) + parseInt(opl_C3.value) == parseInt(inp_D3.value)) {
-                    document.getElementById("alert-banner").classList.remove("alert-danger");
-                    document.getElementById("alert-banner").classList.add("alert", "alert-success");
-                    document.getElementById("alert-banner").innerHTML = "Bingo!";
-                    decision = false;
+            let solved = false;
+            while (!solved) {
+                inputs.opl_B2.value = gok;
+                inputs.opl_C2.value = parseInt(inputs.inp_D2.value) - gok;
+                inputs.opl_B3.value = parseInt(inputs.inp_B4.value) - gok;
+                inputs.opl_C3.value = parseInt(inputs.inp_C4.value) - inputs.opl_C2.value;
+                if (parseInt(inputs.opl_B2.value) + parseInt(inputs.opl_C3.value) === parseInt(inputs.inp_A1.value) &&
+                    parseInt(inputs.opl_B3.value) + parseInt(inputs.opl_C2.value) === parseInt(inputs.inp_D1.value) &&
+                    parseInt(inputs.opl_B3.value) + parseInt(inputs.opl_C3.value) === parseInt(inputs.inp_D3.value)) {
+                    alertBanner.classList.remove("alert-danger");
+                    alertBanner.classList.add("alert", "alert-success");
+                    alertBanner.innerHTML = "Bingo!";
+                    solved = true;
                 } else {
-                    document.getElementById("alert-banner").classList.add("alert", "alert-danger");
-                    document.getElementById("alert-banner").innerHTML = "Niet bingo!";
+                    alertBanner.classList.add("alert", "alert-danger");
+                    alertBanner.innerHTML = "Niet bingo!";
                     gok++;
                 }
-
             }
         }
     </script>

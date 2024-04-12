@@ -41,42 +41,40 @@
         [0, 0, 0, 7, 3, 0, 0, 0, 9, 2, 8, 9, 0, 0, 0, 7, 0, 0, 7, 0, 0, 0, 8, 0, 2, 6, 0, 8, 0, 0, 0, 0, 5, 6, 0, 4, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 9, 0, 0, 5, 0, 0, 8, 0, 5, 0, 3, 2, 6, 5, 0, 0, 2, 4, 0, 9, 0, 0, 3, 1, 0, 6, 0, 0, 0, 0, 7]
     ]
 
-    let activeId = 1
-    let sudoku_string = "<ul>";
-    for (i = 1; i <= 81; i++) {
-        sudoku_string += `<li id="${i}" onclick="activeerCel(${i})"><span></span></li>`;
-    }
-    sudoku_string += "</ul>"
-    document.getElementById("sudoku").innerHTML = sudoku_string;
+    let activeId = 1;
+    const sudokuContainer = document.getElementById("sudoku");
+    sudokuContainer.innerHTML = "<ul>" + Array.from({length: 81}, (_, i) => 
+        `<li id="${i + 1}" onclick="activeerCel(${i + 1})"><span></span></li>`).join('') + "</ul>";
 
     function plaatsCijfer(cijfer) {
-        document.getElementById(activeId).innerText = cijfer;
+        const activeCell = document.getElementById(activeId);
+        if (activeCell) activeCell.innerText = cijfer;
     }
 
     function activeerCel(id) {
-        document.getElementById(activeId).classList.remove("bg-primary-subtle");
+        const previousActiveCell = document.getElementById(activeId);
+        if (previousActiveCell) previousActiveCell.classList.remove("bg-primary-subtle");
         activeId = id;
-        document.getElementById(id).classList.add("bg-primary-subtle");
+        const newActiveCell = document.getElementById(id);
+        if (newActiveCell) newActiveCell.classList.add("bg-primary-subtle");
     }
 
     function generateSudoku() {
-        let randomIndex = Math.floor(Math.random() * sudokus.length);
-        let selectedSudoku = sudokus[randomIndex];
+        const randomIndex = Math.floor(Math.random() * sudokus.length);
+        const selectedSudoku = sudokus[randomIndex];
 
         selectedSudoku.forEach((cellValue, index) => {
-            let cellElement = document.getElementById(index + 1);
-            cellElement.classList.remove("inactive-cel");
-
-            if (cellValue !== 0) {
-                cellElement.innerText = cellValue;
-                cellElement.classList.add("inactive-cel");
-                cellElement.onclick = null;
-            } else {
-                cellElement.innerText = '';
+            const cellElement = document.getElementById(index + 1);
+            if (cellElement) {
+                cellElement.classList.remove("inactive-cel");
+                cellElement.innerText = cellValue !== 0 ? cellValue : '';
+                if (cellValue !== 0) {
+                    cellElement.classList.add("inactive-cel");
+                    cellElement.onclick = null;
+                }
             }
         });
     }
-
 </script>
 
 <style>

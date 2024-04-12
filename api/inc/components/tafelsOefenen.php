@@ -34,46 +34,41 @@
 </div>
 
 <script>
-    let berekendeoplossing;
+    let berekendeOplossing;
 
     function showOpdracht() {
-        let tafelvan = document.getElementById("inputTafelvan").value;
-        let tafeltot = document.getElementById("inputTafeltot").value;
+        const tafelVan = parseInt(document.getElementById("inputTafelvan").value, 10);
+        const tafelTot = parseInt(document.getElementById("inputTafeltot").value, 10);
 
-        if (tafelvan == 0 || tafeltot == 0) {
-            alert(errorTekst);
-            return;
-        } else if (tafelvan < 0 || tafeltot < 0) {
-            alert("Je hebt een negatief getal gebruikt, probeer het opnieuw.");
+        if (tafelVan <= 0 || tafelTot <= 0) {
+            const errorMessage = tafelVan === 0 || tafelTot === 0 ? "Een van de waarden is 0, probeer het opnieuw." : "Je hebt een negatief getal gebruikt, probeer het opnieuw.";
+            alert(errorMessage);
             return;
         }
 
-        let randomnmbr = Math.floor(Math.random() * tafeltot) + 1;
-        let opgave = randomnmbr + " x " + tafelvan;
+        const randomNummer = Math.floor(Math.random() * tafelTot) + 1;
+        const opgave = `${randomNummer} x ${tafelVan}`;
         document.getElementById("inputOpdracht").value = opgave;
         document.getElementById("inputOplossing").focus();
 
-        berekendeoplossing = randomnmbr * tafelvan;
+        berekendeOplossing = randomNummer * tafelVan;
 
-        setTimeout((document.getElementById("inputOplossing").value = ""), 5000);
+        setTimeout(() => document.getElementById("inputOplossing").value = "", 5000);
 
-        document
-            .getElementById("inputOplossing")
-            .classList.remove("is-valid", "is-invalid");
+        document.getElementById("inputOplossing").classList.remove("is-valid", "is-invalid");
     }
 
     function checkOplossing() {
-        let ingevoerdeoplossing = document.getElementById("inputOplossing").value;
-        if (berekendeoplossing == ingevoerdeoplossing) {
-            document.getElementById("inputOplossing").classList.remove("is-invalid");
-            document.getElementById("inputOplossing").classList.add("is-valid");
-            document.getElementById("alert-banner").classList.add("alert", "alert-success");
-            document.getElementById("alert-banner").innerHTML =
-                "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
+        const ingevoerdeOplossing = parseInt(document.getElementById("inputOplossing").value, 10);
+        if (berekendeOplossing === ingevoerdeOplossing) {
+            document.getElementById("inputOplossing").classList.replace("is-invalid", "is-valid");
+            const alertBanner = document.getElementById("alert-banner");
+            alertBanner.className = "alert alert-success";
+            alertBanner.textContent = "Goed gedaan, je krijgt een nieuwe som over 5 seconden.";
 
-            setTimeout(function () {
-                document.getElementById("alert-banner").innerHTML = "";
-                document.getElementById("alert-banner").classList.remove("alert", "alert-success", "alert-danger");
+            setTimeout(() => {
+                alertBanner.textContent = "";
+                alertBanner.classList.remove("alert", "alert-success");
             }, 5000);
 
             setTimeout(showOpdracht, 5000);

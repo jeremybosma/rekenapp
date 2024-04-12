@@ -15,21 +15,17 @@
 
 <script>
   function genereerTafel() {
-    let tafelVan = parseFloat(document.getElementById("tafelInput").value);
+    const tafelVan = parseFloat(document.getElementById("tafelInput").value);
+    const tafelElement = document.getElementById("tafel");
 
     if (isNaN(tafelVan)) {
-      document.getElementById("tafel").innerHTML = errorTekst;
+      tafelElement.innerHTML = "Ongeldige input"; 
     } else {
-      let teller = 1;
-      let uitkomst = 0;
       let tekst = "";
-
-      while (teller < 11) {
-        uitkomst = teller * tafelVan;
-        tekst += teller + "x" + tafelVan + "=" + uitkomst + "<br>";
-        teller++;
+      for (let teller = 1; teller <= 10; teller++) {
+        tekst += `${teller} x ${tafelVan} = ${teller * tafelVan}<br>`;
       }
-      document.getElementById("tafel").innerHTML = tekst;
+      tafelElement.innerHTML = tekst;
     }
   }
 </script>
