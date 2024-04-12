@@ -19,7 +19,7 @@
     const tafelElement = document.getElementById("tafel");
 
     if (isNaN(tafelVan)) {
-      tafelElement.innerHTML = "Ongeldige input"; 
+      tafelElement.innerHTML = "Ongeldige input";
     } else {
       let tekst = "";
       for (let teller = 1; teller <= 10; teller++) {

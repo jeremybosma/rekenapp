@@ -43,7 +43,7 @@
 
     let activeId = 1;
     const sudokuContainer = document.getElementById("sudoku");
-    sudokuContainer.innerHTML = "<ul>" + Array.from({length: 81}, (_, i) => 
+    sudokuContainer.innerHTML = "<ul>" + Array.from({ length: 81 }, (_, i) =>
         `<li id="${i + 1}" onclick="activeerCel(${i + 1})"><span></span></li>`).join('') + "</ul>";
 
     function plaatsCijfer(cijfer) {

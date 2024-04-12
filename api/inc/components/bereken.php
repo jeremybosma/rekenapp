@@ -61,4 +61,4 @@ switch ($operation) {
     document.getElementById("antwoord").innerHTML =
       eersteInput + "<?php echo $operationSymbol; ?>" + TweedeInput + "=" + result;
   }
-</script> 
+</script>
